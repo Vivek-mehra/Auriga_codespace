@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Habit Tracker</title>
+
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>🌱 Habit Tracker</h1>
+                <p>Build consistency. Keep your streak alive.</p>
+            </div>
+
+            <button id="addHabitBtn" class="primary-btn">
+                + Add Habit
+            </button>
+        </header>
+
+
+        <!-- Morning Reminder -->
+        <section id="reminder" class="reminder">
+            <!-- JavaScript will load reminder here -->
+        </section>
+
+
+        <!-- Today's Progress -->
+        <section class="progress-section">
+
+            <div>
+                <h2>Today's Habits</h2>
+                <p id="progressText">Loading...</p>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+        </section>
+
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search habits..."
+            >
+
+            <button id="searchBtn" class="secondary-btn">
+                Search
+            </button>
+
+            <button id="clearSearchBtn" class="secondary-btn">
+                Clear
+            </button>
+
+        </section>
+
+
+        <!-- Habit Cards -->
+        <section>
+
+            <div id="habitContainer" class="habit-container">
+                <!-- JavaScript will create habit cards here -->
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- Add Habit Modal -->
+
+    <div id="habitModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Add New Habit</h2>
+
+                <button id="closeModalBtn" class="close-btn">
+                    ×
+                </button>
+            </div>
+
+            <form id="habitForm">
+
+                <label for="habitName">
+                    Habit Name
+                </label>
+
+                <input
+                    type="text"
+                    id="habitName"
+                    placeholder="e.g. Drink Water"
+                    required
+                >
+
+
+                <label for="habitDescription">
+                    Description
+                </label>
+
+                <input
+                    type="text"
+                    id="habitDescription"
+                    placeholder="e.g. Drink 3 liters"
+                >
+
+
+                <label for="habitFrequency">
+                    Frequency
+                </label>
+
+                <select id="habitFrequency">
+
+                    <option value="daily">
+                        Every Day
+                    </option>
+
+                    <option value="weekdays">
+                        Weekdays
+                    </option>
+
+                </select>
+
+
+                <button type="submit" class="primary-btn">
+                    Create Habit
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
